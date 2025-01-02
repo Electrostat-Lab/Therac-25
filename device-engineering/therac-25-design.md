@@ -26,16 +26,18 @@ The following is an overview of the Therac-25 facility involved in this study of
 > * Components of the **Therac-25 Unit** itself are the most to blame, specifically the turntable part and the VT-100 computer control contains the most components to blame and are required to reverse engineer them to understand the accident causation model.
 > * The device unit generally runs in 3 operating modes with generally 2 therapeutic modes (i.e., Dual Therapeutic Mode Device), and 1 non-therapeutic mode: **Field Light Non-therapeutic Mode**, **X-ray Therapeutic Mode**, and **Electron beam Therapeutic Mode**.
 > * The device unit is settled up and controlled via a VT-100 terminal device, and setup to a specific mode involves a particular **deterministic automata** that transforms the state of the device by initiating the following:
-> 1) A turntable rotation from a calibrated position to the right position to align the target component (i.e., X-ray module or electron scan module) to the linear accelerator gun.
-> 2) Applying the treatment parameters (e.g., electron beam energy - rotation angles - filter component parameters)
+>     1) A turntable rotation from a calibrated position to the right position to align the target component (i.e., X-ray module or electron scan module) to the linear accelerator gun.
+>     2) Applying the treatment parameters (e.g., electron beam energy - rotation angles - filter component parameters)
 
 > [!CAUTION]
 > In Therac-25 uint, unlike the predecessors of its series, since the software is the **only determinant** of the turntable position. Hence, the _turntable state_ must **_critically_** force the device to enter a locked state mode preventing other interrupt services, including the setup serivice itself, from disrupting the operation of the turntable component setup; because in the case of no critical section handling, execution of another _turntable setup routine_ will eventually lead the VT-100 to send another turntable command, which presumably starts first with a calibration preprocessor, then a turntable rotation processor; this could be hazardous when the turntable is already in **a rotation session** which is a hardware-only state (as the microswitches are removed); as the computer assumes the angle from the previously entered mode; thus the net result of this mess would likely be an undetermined position of the turntable that most like lies in the interval between the previous mode and the new commanded mode, which could result in unprotected direct electron beam radition (i.e., direct linear accelerator radiation).
 >
 > Hints: Several Maneuvers should be addressed in these issues including:
-> 1) Critical-safety Automatas: design some critical tasks as **"Locked Auto States"**; that typically involves sofware-to-hardware interfacing that takes place without the conventional hardware-safety feedback measures (e.g., the turntable microswitches or the interlocks).
-> 2) Anti-failure Automatas: 
-> 3) Emergency Shutdown Automatas: could be executed as a last resort when the previously described anti-failure mechanisms fail. 
+> 1) **Critical-safety Automatas**: design some critical tasks as **"Locked Auto States"**; that typically involves sofware-to-hardware interfacing that takes place without the conventional hardware-safety feedback measures (e.g., the turntable microswitches or the interlocks).
+> 2) **Anti-failure Automatas**:
+>   1) _Hardware fuse circuits_: that blowout the turntable circuitry with an error message and error report on VT-100, if the treatment is started with the electron linear accelerator exposed directly to the patient without a turntable target.
+>   2) _Turntable Ground Wiring Surface_: wiring the turntable with a specific way to the ground may drain the hitting electron beam to the GND if the linear accelerator is fired in an exposed state (?).
+> 4) **Emergency Shutdown Automatas**: could be executed as a last resort when the previously described anti-failure mechanisms fail. 
 
 
 | Components (Hardware) | Components (Software) |
