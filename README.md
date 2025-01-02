@@ -20,3 +20,8 @@
 * **Hardware-Software Co-design:** A simulation to the normal automata and the catastrophic automata that has led to this imminent failure.
 * **Hardware-Software Co-design:** Suggested pathces to this simulation.
 * **Hardware-Software Co-design:** Nowadays' preventions of these catastrophes.
+
+## References:
+* [Leveson, N. G., & Turner, C. S. (1993). An investigation of the Therac-25 accidents, ACM DL](https://dl.acm.org/doi/10.1109/MC.1993.274940)
+* [Therac-25 Update](http://sunnyday.mit.edu/papers/therac.pdf)
+* [Therac-25 Wikipedia page.](https://en.wikipedia.org/wiki/Therac-25)
