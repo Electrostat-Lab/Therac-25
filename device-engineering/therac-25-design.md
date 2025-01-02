@@ -35,8 +35,8 @@ The following is an overview of the Therac-25 facility involved in this study of
 > Hints: Several Maneuvers should be addressed in these issues including:
 > 1) **Critical-safety Automatas**: design some critical tasks as **"Locked Auto States"**; that typically involves sofware-to-hardware interfacing that takes place without the conventional hardware-safety feedback measures (e.g., the turntable microswitches or the interlocks).
 > 2) **Anti-failure Automatas**:
->   1) _Hardware fuse circuits_: that blowout the turntable circuitry with an error message and error report on VT-100, if the treatment is started with the electron linear accelerator exposed directly to the patient without a turntable target.
->   2) _Turntable Ground Wiring Surface_: wiring the turntable with a specific way to the ground may drain the hitting electron beam to the GND if the linear accelerator is fired in an exposed state (?).
+>       1) _Hardware fuse circuits_: that blowout the turntable circuitry with an error message and error report on VT-100, if the treatment is started with the electron linear accelerator exposed directly to the patient without a turntable target.
+>       2) _Turntable Surface Ground Wiring_: wiring the turntable with a specific way to the ground may drain the hitting electron beam to the GND if the linear accelerator is fired in an exposed state (?).
 > 4) **Emergency Shutdown Automatas**: could be executed as a last resort when the previously described anti-failure mechanisms fail. 
 
 
