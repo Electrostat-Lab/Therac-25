@@ -14,5 +14,5 @@ The design involves connecting **4 hardware components** together, and the relat
 >
 > * The **Fuse Module** must provide the explicit ability to change a blown fuse with a new one. The blown fuse may cut the power off the linear accelerator circuitry and fires an error interrupt signal to the VT-100 interface to indicate a FATAL ERROR; as the device is down for "Unsafe" operations and need immediate maintenance.
 > * The relations between modules involves 2 types of relations:
->   1) **TTL or transistor-transistor-logic relation**: a binary tuple, typically between the turntable controller module and the VT-100 unit, and back from the VT-100 to the Fuse Module (i.e., $$R_{TTL} = [(Table, VT-100), (VT-100, Fuse)]$$).
+>   1) **TTL or transistor-transistor-logic relation**: a binary tuple, typically between the turntable controller module and the VT-100 unit, and back from the VT-100 to the Fuse Module (i.e., $$R_{TTL} = [(Table, VT_100), (VT_100, Fuse)]$$).
 >   2) **High-dc relation:** a triple tuple, typically lies between the Fuse Module, the power source, and the Linear Accelerator Module, and synthesized by a high-performance MOSFET (i.e., $$R_{HV-DC} = [(Fuse, Power, Accelerator)]$$).
