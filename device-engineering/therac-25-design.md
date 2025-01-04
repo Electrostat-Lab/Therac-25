@@ -54,7 +54,7 @@ The following is an overview of the Therac-25 facility involved in this study of
 11) Printer Module.
 
 ### Software Modules and Processors:
-1) Processors (via an RTOS Schedular):
+1) Processors (via an RTOS Scheduler):
     1) Linear Accelerator Processor (**Faulty Interaction**).
     2) Input Mode Processor (**Faulty Interaction**).
     3) Dosimeter input processor.
