@@ -17,6 +17,7 @@ The design involves connecting **4 hardware components** together, and **the rel
 >   1) **TTL or transistor-transistor-logic relation**: a binary tuple, typically between the turntable controller module and the VT-100 unit, and back from the VT-100 to the Fuse Module (i.e., $$R_{TTL} = [(Table, VT_{100}), (VT_{100}, Fuse)]$$).
 >   2) **High-dc relation:** a triple tuple, typically lies between the Fuse Module, the power source, and the Linear Accelerator Module, and synthesized by a high-performance MOSFET (i.e., $$R_{HV-DC} = [(Fuse, Power, Accelerator)]$$).
 > * The design could be further enforced by stimulating software-hardware component the "Emergency Shutdown Interrupt Service", when the treatment is proceeded with an indeterminated turntable position, instead of introducing a new software component.
+> * The incorporation of the fuse or circuit breaker modules as an anti-failure measure for the turntable module are an actual electrical hack, and will entail intentionally passing a current rating above the selected fuse module, but below into the fuse module circuitry via 
 
 
 ## Suggested design:
