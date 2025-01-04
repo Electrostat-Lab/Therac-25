@@ -39,8 +39,33 @@ The following is an overview of the Therac-25 facility involved in this study of
 >       2) _Turntable Surface Ground Wiring_: wiring the turntable with a specific way to the ground may drain the hitting electron beam to the GND if the linear accelerator is fired in an exposed state (?).
 > 4) **Emergency Shutdown Automatas**: could be executed as a last resort when the previously described anti-failure mechanisms fail. 
 
+### Hardware Modules and Components:
+1) Turntable Module.
+    1) Mirror for field light Mode (Field Light Module).
+    2) Electron Mode Scan Magnet (Electron Beam Module).
+    3) X-ray Target Flattener and primary definer (X-ray Module).
+    4) Plunger (Turntable Module).
+    5) Microswitches (REMOVED).   
+6) Power Module.
+7) VT-100 Module.
+8) Emergency Shutdown Module.
+9) Intercom Module.
+10) Door control Module.
+11) Printer Module.
 
-| Components (Hardware) | Components (Software) |
-|-----------------------|-----------------------|
-| 
+### Software Modules and Processors:
+1) Processors (via an RTOS Schedular):
+    1) Linear Accelerator Processor (**Faulty Interaction**).
+    2) Input Mode Processor (**Faulty Interaction**).
+    3) Dosimeter input processor.
+    4) Upset and Recovery processor.
+    5) Timer processor.
+    6) Turntable position/controls processor (**Faulty Interaction**).
+    7) Printer processor.
+2) Interrupt Services:
+    1) Emergency Interrupt service (**Faulty Interaction**).
+    2) Upset detection service. (?)
+    3) Upset recovery service. (?)
+    4) Timer Interrupt service.
+    5) Turntable position interrupt service. (**Faulty Interaction**).
 
