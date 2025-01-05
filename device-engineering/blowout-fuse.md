@@ -20,7 +20,23 @@ The design involves connecting **4 hardware components** together, and **the rel
 > * The incorporation of the fuse or circuit breaker modules as an anti-failure measure for the turntable module are an actual electrical hack, and will entail intentionally passing a current rating above the selected fuse module via a MOSFET switch circuit. However, this type of design will require additional modular safety against the high current that is introduced intentionally into this connection, current limiting devices or current dividers (e.g., Resistors in parallel) are usually a good solution so far, but the general complexity increases.
 > * There are several other ways to introduce this safety circuit typically via connecting the VT-100 commander to the turntable module via an NAND digital logic circuitry that gets triggered to shut off the circuit when both inputs are HIGH. If the turntable module requires non-TTL voltage power source; then an additional High-Voltage relay is required to complete the wiring between the digital circuit and the module power circuitry.
 
+> [!CAUTION]
+> 
+> Using the fuse-based anti-failure circuit design has its unrevealed downsides which is the complexity of adding further protection mechanisms against
+> high-current which is an intentional design in this case, as this entails a high-voltage protection logic.
+>
+> There are better alternatives though, the introduction of digital control via simple NAND, Multiplexers, and Decoder modules could be much simpler and safer.
 
-## Suggested design:
+## Suggested designs for the _Anti-failure Module_:
 
-A suggested design using digital logic (automata model), and a wiring diagram:
+Suggested designs using digital logic (automata model) for the **Anti-failure Turntable Shutdown Module**:
+
+### Digital Logic Protection Modules:
+| NAND Anti-failure Turntable Module | Multiplexer-based Anti-failure Module | Decoder-based Anti-failure Module |
+|------------------------------------|---------------------------------------|-----------------------------------|
+| | | |
+
+### High-Voltage Logic Protection Modules:
+| Fuse-based Anti-failure Module | Thermal Circuit breaker Anti-failure Module | 
+|--------------------------------|---------------------------------------------|
+| | |
