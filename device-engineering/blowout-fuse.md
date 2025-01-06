@@ -31,6 +31,8 @@ The design involves connecting **4 hardware components** together, and **the rel
 
 Suggested designs using digital logic (automata model) for the **Anti-failure Turntable Shutdown Module**:
 
+### Automata Model for the Anti-failure Module:
+
 ### Digital Logic Protection Modules:
 | NAND Anti-failure Turntable Module | Multiplexer-based Anti-failure Module | Decoder-based Anti-failure Module |
 |------------------------------------|---------------------------------------|-----------------------------------|
@@ -41,7 +43,6 @@ Suggested designs using digital logic (automata model) for the **Anti-failure Tu
 | Fuse-based Anti-failure Module | Thermal Circuit breaker Anti-failure Module | 
 |--------------------------------|---------------------------------------------|
 | | |
-
 
 ## Useful formulas for different components used: 
 | BJTs | FETs (Field Effect Transistors) | MOSFETs (Metal Oxide Semi-conductor Field Effect Transistors) | MSFETs (Metal Semi-conductor Field Effect Transistors) |
