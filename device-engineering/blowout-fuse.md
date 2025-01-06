@@ -34,7 +34,7 @@ Suggested designs using digital logic (automata model) for the **Anti-failure Tu
 ### Digital Logic Protection Modules:
 | NAND Anti-failure Turntable Module | Multiplexer-based Anti-failure Module | Decoder-based Anti-failure Module |
 |------------------------------------|---------------------------------------|-----------------------------------|
-| <img src=""/> | | | 
+| <img src="https://github.com/Electrostat-Lab/Therac-25/blob/therac-25-design/device-engineering/assets/Screenshot%20from%202025-01-06%2002-48-47.png"/> | | | 
 | The preceding circuit represents a TTL voltage anti-failure module circuit design for the Turntable module, the basic components are:<br/> 1) A NAND package **74AHC1G00**.<br/> 2) A SPST Reed Relay (Single-pole-single-throw).<br/> 3) A 1N4001 diode for a transient suppressor protection circuit.<br/> The circuit takes commands from the **VT-100** digital logic CMOS encoder that if commanded as `11` will shutdown the turntable immediately (typically within nanoseconds delay time -- reed relay switching time).  | | |
 
 ### High-Voltage Logic Protection Modules:
