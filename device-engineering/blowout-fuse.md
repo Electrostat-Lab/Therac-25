@@ -41,3 +41,17 @@ Suggested designs using digital logic (automata model) for the **Anti-failure Tu
 | Fuse-based Anti-failure Module | Thermal Circuit breaker Anti-failure Module | 
 |--------------------------------|---------------------------------------------|
 | | |
+
+
+## Useful formulas for different components used: 
+| BJTs | FETs (Field Effect Transistors) | MOSFETs (Metal Oxide Semi-conductor Field Effect Transistors) | MSFETs (Metal Semi-conductor Field Effect Transistors) |
+|-----------|-----------|---------|------|
+|    |   |  | |
+|    |    |  | |
+
+| Reed Relays | Zener Diodes | Inductance and Inductive Reaction |
+|-------------|--------------|-------|
+|  |  | |
+
+### References:
+
