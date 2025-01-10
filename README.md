@@ -1,4 +1,4 @@
-# Therac-25
+# <img src=https://github.com/Electrostat-Lab/Therac-25/blob/master/assets/radiation-nuclear-svgrepo-com.svg height=60 width=60/> Therac-25
 **Preface**: This is a detailed scientific guide that analyze the operation of the Therac series devices, a radiation therapy series designed, developed, and assembled by the affiliates of Compagnie générale de radiologie (CGR) of France and the Atomic Energy of Canda Limited (AECL) Corps. The document is based on Leveson's report files that investigate the sequential failures in much more detail, however the focus here is mainly to use the mathematical and programming models to analyze the issues explained in Levenson's documents.
 
 ## Outline:
